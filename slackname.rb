@@ -42,4 +42,4 @@ emoji = emojis.sample
 puts Time.now.strftime('%A, %b %d')
 40.times { print "#{emoji} " }
 
-puts `curl -XPOST 'https://slack.com/api/users.profile.set?token=#{token}&user=#{user}&profile=%7B"last_name":"#{last_name_prefix}%20#{emoji}"%7D'`
+`curl -s -XPOST 'https://slack.com/api/users.profile.set?token=#{token}&user=#{user}&profile=%7B"last_name":"#{last_name_prefix}%20#{emoji}"%7D'`
