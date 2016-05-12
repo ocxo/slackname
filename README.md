@@ -49,5 +49,5 @@ Add this to your crontab with `crontab -e` to run it hourly, 9-5, M-F:
 ```
 SHELL=/bin/bash
 BASH_ENV="~/.bashrc"
-0 9-17 * * 1-5 cd /path/to/slackname && /path/to/bundle exec ruby slackname.rb
+0 9-17 * * 1-5 cd /path/to/slackname && /path/to/bundle exec ruby slackname.rb > /dev/null
 ```
